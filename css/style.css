@@ -1,0 +1,109 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css");
+
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+swiper-container {
+    background-image:url(/img/Marval-parque-OrienteVIP_VistaAerea_Baja-scaled.jpg) ;
+    width: 100%;
+    height: 100%;
+}
+
+.prueba {
+  background-color: #eee;
+}
+
+.menu {
+  display:grid;
+  gap: 1rem;
+  grid-auto-rows: 22rem ;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+}
+
+.iconMenu {
+  display: flex;
+  justify-content: center;  
+}
+
+.iconMenu a {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.iconMenu a span {
+  transition: transform 0.2s ease-out;
+}
+
+.iconMenu a:hover span:first-child {
+  transform: translateY(100%);
+}
+
+.iconMenu a:hover span:last-child{
+  transform: none;
+}
+
+.iconMenu a span:last-child {
+  position: absolute;
+  top:0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-100%);
+
+}
+
+.iconMenu a span:first-child {
+  display: inline-block;
+  padding: 10px;
+}
+
+.iconMenu[data-animation="to-top"] a span:last-child {
+  transform: translateY(100%);
+}
+.iconMenu[data-animation="to-top"] a:hover span:first-child {
+  transform: translateY(-100%);
+}
+.iconMenu[data-animation="to-right"] a span:last-child {
+  transform: translateX(-100%);
+}
+.iconMenu[data-animation="to-right"] a:hover span:first-child {
+  transform: translateX(100%);
+}
+.iconMenu[data-animation="to-left"] a span:last-child {
+  transform: translateX(100%);
+}
+.iconMenu[data-animation="to-left"] a:hover span:first-child {
+  transform: translateX(-100%);
+}
+
+swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background:transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
